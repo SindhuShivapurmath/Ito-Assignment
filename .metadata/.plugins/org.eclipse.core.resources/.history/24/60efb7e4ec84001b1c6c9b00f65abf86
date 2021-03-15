@@ -1,0 +1,119 @@
+package p1;
+
+import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class DataTypeConversionTest {
+
+	@Test
+	void testStringToInt() {
+		int expected=34;
+		assertEquals(expected, DataTypeConversion.stringToInt("34"));
+	}
+
+	@Test
+	void testIntToString() {
+		String expected="56";
+		assertEquals(expected, DataTypeConversion.intToString(56));
+	}
+
+	@Test
+	void testStringToLong() {
+		Long expected=1237689890l;
+		assertEquals(expected, DataTypeConversion.stringToLong("1237689890"));
+	}
+
+	@Test
+	void testLongToString() {
+		String expected="1237689890";
+		assertEquals(expected, DataTypeConversion.longToString(1237689890l));
+	}
+
+	@Test
+	void testStringToFloat() {
+		Float expected=33.44f;
+		assertEquals(expected, DataTypeConversion.stringToFloat("33.44"));
+	}
+
+	@Test
+	void testFloatToString() {
+		String expected="33.44";
+		assertEquals(expected, DataTypeConversion.floatToString(33.44f));
+	}
+
+	@Test
+	void testStringToDouble() {
+		Double expected=3456.5678d;
+		assertEquals(expected, DataTypeConversion.stringToDouble("3456.5678"));
+	}
+
+	@Test
+	void testDoubleToString() {
+		String expected="3456.5678";
+		assertEquals(expected, DataTypeConversion.doubleToString(3456.5678d));
+	}
+
+	@Test
+	void testStringToChar() {
+		char[] expected= {'a'};
+		assertThat(expected).isEqualTo(DataTypeConversion.stringToChar("a"));
+	}
+
+	@Test
+	void testCharToString() {
+		String expected="a";
+		assertEquals(expected, DataTypeConversion.charToString('a'));
+	}
+
+	@Test
+	void testIntTolong() {
+		long expected=5678;
+		assertEquals(expected, DataTypeConversion.intTolong(5678));
+	}
+
+	@Test
+	void testLongToint() {
+		int expected=34;
+		assertEquals(expected, DataTypeConversion.longToint(34l));
+	}
+
+	@Test
+	void testIntTodouble() {
+		double expected=3456d;
+		assertEquals(expected, DataTypeConversion.intTodouble(3456));
+	}
+
+	@Test
+	void testDoubleToint() {
+		int expected=3456;
+		assertEquals(expected, DataTypeConversion.doubleToint(3456.5678d));
+	}
+
+	@Test
+	void testCharToint() {
+		int expected=97;
+		assertEquals(expected, DataTypeConversion.charToint('a'));
+	}
+
+	@Test
+	void testIntTochar() {
+	char expected='a';
+	assertEquals(expected, DataTypeAssignment.intTochar(97));
+	}
+
+	@Test
+	void testStringToBoolean() {
+		Boolean expected=true;
+		assertEquals(expected, DataTypeAssignment.stringToBoolean("true"));
+	}
+
+	@Test
+	void testBooleanToString() {
+		String expected="false";
+		assertEquals(expected, DataTypeAssignment.booleanToString(false));
+	}
+
+
+}

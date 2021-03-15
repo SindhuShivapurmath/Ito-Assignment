@@ -1,0 +1,86 @@
+package p1;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.LinkedList;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class LinkedListsTest {
+
+	private LinkedList<String> studentNames3;
+
+	@BeforeEach
+	void linkedListSetUp() {
+		studentNames3 = new LinkedList<String>();
+		studentNames3.add("Krishna");
+		studentNames3.add("Arjuna");
+		studentNames3.add("Bheema");
+		studentNames3.add("Rama");
+		studentNames3.add("Karna");
+	}
+
+	/*
+	 * to append the specified element to the end of a linked list.
+	 */
+
+	@Test
+	void appendAtLastTest() {
+		LinkedList<String> linkedList = LinkedListPrograms.appendAtLast(studentNames3, "Nakula");
+		assertEquals("Nakula", linkedList.getLast());
+	}
+
+	/*
+	 * to insert the specified element at the front of a linked list.
+	 */
+	@Test
+	void insertAtFrontTest() {
+		assertEquals("Nakula", LinkedListPrograms.insertAtFront(studentNames3, "Nakula").getFirst());
+	}
+
+	/*
+	 * to insert the specified element at the end of a linked list.
+	 */
+	@Test
+	void insertAtEndTest() {
+
+		assertEquals("Nakula", LinkedListPrograms.insertAtEnd(studentNames3, "Nakula").getLast());
+	}
+
+	/*
+	 * to remove first and last element from a linked list.
+	 */
+	@Test
+	void removeFirstElementTest() {
+
+		assertEquals("Krishna", LinkedListPrograms.removeFirstElement(studentNames3));
+	}
+
+	@Test
+	void removeLastElementTest() {
+
+		assertEquals("Karna", LinkedListPrograms.removeLastElement(studentNames3));
+	}
+
+	@Test
+	void joinLinkedListTest() {
+		LinkedList<String> linkedList = new LinkedList<String>();
+		linkedList.add("Nakula");
+		assertTrue(LinkedListPrograms.joinLinkedList(studentNames3, linkedList).contains("Nakula"));
+	}
+
+	/*
+	 * to clone an linked list to another linked list.
+	 */
+	@Test
+	void cloneLinkedListTest() {
+		assertArrayEquals(studentNames3.toArray(), LinkedListPrograms.cloneLinkedList(studentNames3).toArray());
+	}
+
+	/**
+	 * Testing TreeSet programs
+	 */
+	private TreeSet<Integer> numbers;
+
+}

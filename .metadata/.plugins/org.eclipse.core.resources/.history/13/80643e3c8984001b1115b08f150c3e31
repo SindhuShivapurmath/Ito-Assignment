@@ -1,0 +1,46 @@
+package p1;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class CollectionsTest {
+
+	private ArrayList<String> studentNames;
+	private HashSet<String> studentNames2;
+	
+	@BeforeEach
+	void setUp() {
+		studentNames = new ArrayList<String>();
+		studentNames.add("Sindhu");
+		studentNames.add("Sahana");
+		studentNames.add("Kavana");
+		studentNames.add("Raksha");
+		studentNames.add("Akshu");
+		studentNames2 = new HashSet<String>();
+		studentNames2.add("Sindhu");
+		studentNames2.add("Sahana");
+		studentNames2.add("Kavana");
+		studentNames2.add("Raksha");
+		studentNames2.add("Akshu");
+	}
+	
+	@Test
+	public void tesInsertElementAtFirst() {
+		String name = "Kavya";
+		ArrayList<String> arrayList = Collections.insertElementAtFirst(studentNames, name);
+		assertSame(name, arrayList.get(0));
+	}
+
+	@Test
+	public void testRetriveElement() {
+		String name = ArrayListPrograms.retriveElement(studentNames, 2);
+		assertEquals(name, "Bheema");
+	}
+	
+
+}

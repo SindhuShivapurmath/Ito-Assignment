@@ -1,0 +1,32 @@
+package p1;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+
+import org.junit.jupiter.api.Test;
+
+class CollectionsTest {
+
+	private ArrayList<String> studentNames;
+	private HashSet<String> studentNames2;
+	
+	@BeforeEach
+	void setUp() {
+		studentNames = new ArrayList<String>();
+		studentNames.add("Krishna");
+		studentNames.add("Arjuna");
+		studentNames.add("Bheema");
+		studentNames.add("Rama");
+		studentNames.add("Karna");
+		studentNames2 = new HashSet<String>();
+		studentNames2.add("Krishna");
+		studentNames2.add("Karna");
+		studentNames2.add("Arjuna");
+		studentNames2.add("Bheema");
+		studentNames2.add("Nakula");
+	}
+	
+
+}

@@ -1,0 +1,31 @@
+package p1;
+
+import java.util.TreeMap;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class TreeMaps implements CommandLineRunner {
+	public static void main(String[] args) throws Exception {
+		TreeMaps collections=new TreeMaps();
+		collections.run();
+	}
+	
+	@Override
+	public void run(String... args) throws Exception {
+		
+	}
+	
+	public static TreeMap<Integer, String> createTreeMap() {
+		TreeMap<Integer, String> students = new TreeMap<Integer, String>();
+		students.put(23, "Krishna");
+		students.put(24, "Arjuna");
+		students.put(25, "Bheema");
+		students.put(26, "Rama");
+		students.put(27, "Karna");
+		return students;
+	}
+
+	
+}

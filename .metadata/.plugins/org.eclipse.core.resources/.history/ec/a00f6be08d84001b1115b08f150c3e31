@@ -1,0 +1,9 @@
+package p1;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Collections1 implements CommandLineRunner {
+
+}

@@ -1,0 +1,17 @@
+package p1;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class TreeMaps implements CommandLineRunner {
+	public static void main(String[] args) throws Exception {
+		HashSets collections=new HashSets();
+		collections.run();
+	}
+	
+	@Override
+	public void run(String... args) throws Exception {
+		
+	}
+}

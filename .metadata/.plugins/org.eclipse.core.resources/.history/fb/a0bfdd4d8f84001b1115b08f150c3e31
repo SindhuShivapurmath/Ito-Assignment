@@ -1,0 +1,25 @@
+package p1;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.HashMap;
+
+import org.junit.jupiter.api.Test;
+
+class HashMapsTest {
+	
+	private HashMap<Integer, String> studentsName4;
+	private HashMaps hashMapPrograms;
+
+	@BeforeEach
+	void hashMapSetUp() {
+		studentsName4 = new HashMap<Integer, String>();
+		studentsName4.put(1, "Krishna");
+		studentsName4.put(2, "Arjuna");
+		studentsName4.put(3, "Bheema");
+		studentsName4.put(4, "Rama");
+		studentsName4.put(5, "Karna");
+
+	}
+
+}
